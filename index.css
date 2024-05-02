@@ -1,0 +1,149 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	max-width: 1440px;
+	background-color: #f1f1f1;
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	font-family: Inter, Arial, sans-serif;
+}
+
+.header__top {
+	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+
+	background-color: #fff;
+	height: 64px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: row;
+	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+	margin: 1px;
+}
+
+.header__description {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-left: 32px;
+}
+
+.header__button-back {
+	width: 25px;
+	height: 25px;
+	margin-right: 8px;
+	border: none;
+	background: none;
+	background-image: url(./images/Back\ Outline.svg);
+}
+
+.header__button-back:hover {
+	opacity: 0.8;
+}
+
+.header__text {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 21.09px;
+}
+
+.header__text-span {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 21.09px;
+}
+
+.header__group {
+	display: flex;
+	flex-direction: row;
+}
+
+.header__group-button {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	background: none;
+	margin-right: 32px;
+}
+
+.header__group-icon {
+	width: 24px;
+	height: 24px;
+}
+
+.header__group-icon:hover {
+	opacity: 0.8;
+}
+
+.header__group-description {
+	margin-top: 8px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 16.41px;
+}
+
+.header__bottom {
+	height: 40px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #fafafa;
+	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.header__bottom-button {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 98px;
+	margin: auto;
+	border: 0;
+	background: none;
+}
+
+.header__bottom-icon {
+	width: 24px;
+	height: 24px;
+	margin-right: 8px;
+}
+
+.header__bottom-description {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16.41px;
+}
+
+.header__bottom-group {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-left: 32px;
+}
+.header__bottom-group:last-child {
+	margin-right: 32px;
+}
+
+.header__bottom-button {
+}
+
+.header__bottom-icon {
+}
+
+.header__bottom-description {
+}
