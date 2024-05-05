@@ -147,3 +147,79 @@ body {
 
 .header__bottom-description {
 }
+
+.main {
+	display: flex;
+	flex-direction: row;
+}
+.main__container {
+}
+.comment {
+	width: 1080px;
+	display: grid;
+	gap: 32px;
+}
+.comment__content {
+	margin: auto;
+	max-width: 1080px;
+	background-color: #fff;
+}
+.comment__image {
+	max-width: 1016px;
+	max-height: 424px;
+	object-fit: cover;
+}
+.comment__info {
+}
+.comment__icon {
+}
+.comment__text {
+}
+.comment__details {
+}
+.comment__description {
+}
+.comment__time {
+}
+.comment__actions {
+}
+.comment-action {
+}
+.comment-action__count {
+}
+.placeholder {
+}
+.placeholder__item {
+}
+.placeholder__text {
+}
+.placeholder__details {
+}
+.placeholder__time {
+}
+.placeholder__button {
+}
+
+.dgjdkfg {
+	width: 264px;
+	height: 296px;
+	background-color: #111;
+
+	padding: 32px, 50px, 32px, 50px;
+}
+.fsddg {
+	width: 264px;
+	height: 312px;
+	background-color: #111;
+}
+.gfdgfh {
+	width: 264px;
+	height: 190px;
+	background-color: #111;
+}
+
+.dsgsdggfgd {
+	display: grid;
+	gap: 16px;
+	width: 264px;
+}
