@@ -226,9 +226,21 @@ body {
 }
 
 .comment__actions {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 32px;
 }
 .comment-action {
+	display: flex;
+	flex-direction: row;
+	margin-top: 8px;
 }
+
+.comment-action__image {
+	width: 24px;
+	height: 24px;
+}
+
 .comment-action__count {
 }
 .placeholder {
