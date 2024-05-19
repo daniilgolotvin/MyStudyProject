@@ -5,8 +5,22 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Resume</title>
-	<link rel="stylesheet" href="./index.css">
-	<script src="https://api-maps.yandex.ru/2.1/?apikey=<Your_API_Key>&lang=ru_RU" type="text/javascript"></script>
+	<meta name="description"
+		content="Создайте ознакомительную страницу, интерактивную карту с маркером местоположения и таймером посещения страницы. Полный пример с использованием HTML, CSS и JavaScript для создания современной веб-страницы.">
+	<meta name="keywords"
+		content="резюме, интерактивная карта, таймер посещения, JavaScript, HTML, CSS, создание сайта, веб-разработка">
+	<link rel="stylesheet" href="./pages/index.css">
+
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=bf05c8b6-4bae-4246-8532-e003bd4a9a98&lang=ru_RU&ns=ymaps"
+		type="text/javascript"></script>
+
+
+	<script src="./components/time.js" defer></script>
+	<script src="./components/map.js" defer></script>
+	<script src="./components/activity.js" defer></script>
+</head>
+
+
 
 </head>
 
@@ -15,9 +29,9 @@
 		<div class="header__top">
 			<div class="header__description">
 				<button class="header__button-back"></button>
-				<p class="header__text">User pages <span class='header__text-span'>- Profile</span></p>
+				<h1 class="header__text">User pages <span class='header__text-span'>- Profile</span></h1>
 			</div>
-			<div class="header__group">
+			<nav class="header__group">
 				<button class="header__group-button">
 					<img src="./images/Chart Outline.svg" alt="Icon Statistics" class="header__group-icon">
 					<span class="header__group-description">Statistics</span>
@@ -30,24 +44,24 @@
 					<img src="./images/Receipt Outline.svg" alt="Icon Schedule" class="header__group-icon">
 					<span class="header__group-description">Schedule</span>
 				</button>
-			</div>
+			</nav>
 		</div>
 		<div class="header__bottom">
-			<div class="header__bottom-group">
+			<nav class="header__bottom-group">
 
-				<button class="header__bottom-button">
+				<button class="header__bottom-button active" data-target="activity">
 					<img src="./images/Menu Outline.svg" alt="Icon Activity" class="header__bottom-icon">
 					<span class="header__bottom-description">Activity</span>
 				</button>
-				<button class="header__bottom-button">
+				<button class="header__bottom-button" data-target="map">
 					<img src="./images/Location Outline.svg" alt="Icon Map" class="header__bottom-icon">
-					<span class="header__bottom-description">Map</span>
+					<span class="header__bottom-description mapButton">Map</span>
 				</button>
-				<button class="header__bottom-button">
+				<button class="header__bottom-button" data-target="time">
 					<img src="./images/Time Outline.svg" alt="Icon Time" class="header__bottom-icon">
 					<span class="header__bottom-description">Time</span>
 				</button>
-			</div>
+			</nav>
 
 			<div class="header__bottom-group">
 				<button class="header__bottom-button">
@@ -69,9 +83,9 @@
 			</div>
 		</div>
 	</header>
-	<main class="activity">
+	<main id="activity" class="activity content-block active">
 		<div class="main__container">
-			<div class="comment">
+			<section class="comment">
 				<div class="comment__content">
 					<img src="./images/myProfileOnGitHub.png" alt="volna" class='comment__image'>
 					<div class="comment__info">
@@ -79,10 +93,11 @@
 						<p class="comment__text"> <a href="#" class='comment__text-user'>Daniil </a>commented: </p>
 					</div>
 					<div class="comment__details">
-						<p class='comment__description'>Hello, world. My name is Daniil and I am an beginner web developer. I am a
+						<article class='comment__description'>Hello, world. My name is Daniil and I am an beginner web developer. I
+							am a
 							student of MISIS in the city of Vyksa at the Faculty of Information Technologies in Management and study
 							on courses from YandexPracticum in the direction of web development.
-						</p>
+						</article>
 						<p class='comment__time'>– Danya, <span class="comment__time-clock">10:30 am</span> </p>
 					</div>
 					<div class="comment__actions">
@@ -96,8 +111,8 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="placeholder">
+			</section>
+			<section class="placeholder">
 				<div class="placeholder__item">
 					<p class="placeholder__text">Sunset Sunset Sunset</p>
 					<div class="placeholder__details">
@@ -114,10 +129,10 @@
 						<button class="placeholder__button"><img src="./images/Small Arrow Down Outline.svg" alt=""></button>
 					</div>
 				</div>
-			</div>
+			</section>
 		</div>
-		<div class="profile">
-			<div class="user">
+		<section class="profile">
+			<aside class="user">
 				<img src="./images/My Photo.jpeg" alt="" class="user__avatar">
 				<p class="user__name">Daniil Golotvin</p>
 				<p class="user__description">Clown</p>
@@ -127,8 +142,8 @@
 					<img src="./images/twitter_2_icon-icons.com_59206 1.svg" alt="" class="user__icon">
 				</div>
 
-			</div>
-			<div class="navigation">
+			</aside>
+			<aside class="navigation">
 				<div class="navigation__header">
 					<p class="navigation__title">Navigation</p>
 					<button class="navigation__toggle-button toggle__chevron-button">
@@ -168,11 +183,11 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</aside>
 
 
 
-			<div class="share-thoughts">
+			<aside class="share-thoughts">
 				<div class="share-thoughts__header">
 					<p class="share-thoughts__title">Share your thoughts</p>
 					<button class="share-thoughts__toggle-button toggle__chevron-button">
@@ -181,30 +196,76 @@
 				</div>
 				<textarea class="share-thoughts__input" placeholder="Enter your message..."></textarea>
 				<button class="share-thoughts__submit-button">Save</button>
-			</div>
+			</aside>
 
-		</div>
+		</section>
 		</div>
 
 
 	</main>
-	<main class="map">
+	<main id="map" class="map content-block">
 		<div class="map__group">
 			<p class="map__group-title">Basic map</p>
 			<div class="map__group-button">
-				<button class="map__group-button-map"></button>
-				<button class="map__group-button-map"></button>
-				<button class="map__group-button-map"></button>
+				<button class="map__group-button-map"><img src="./images/Chevron Down Outline.svg" alt=""></button>
+				<button class="map__group-button-map"><img src="./images/Update Outline.svg" alt=""></button>
+				<button class="map__group-button-map"><img src="./images/Close Outline.svg" alt=""></button>
+
 			</div>
 		</div>
 		<div class="map__container">
-			<div id="map" class="map__container-map"></div>
+			<div id="map-box" class="map__container-map"></div>
 			<div id="preloader" class="map__container-preloader">
 				<div class="map__preloader"></div>
 			</div>
 		</div>
 	</main>
+	<main id="time" class="timer content-block">
+		<div class="timer__group">
+			<p class="timer__title">Timer</p>
+			<div class="map__group-button">
+				<button class="map__group-button-map"><img src="./images/Chevron Down Outline.svg" alt=""></button>
+				<button class="map__group-button-map"><img src="./images/Update Outline.svg" alt=""></button>
+				<button class="map__group-button-map"><img src="./images/Close Outline.svg" alt=""></button>
+			</div>
+		</div>
+		<div class="timer__display" id="timer-display">00:00:00</div>
+	</main>
+	<script>
+		// Добавьте инициализацию карты внутри DOMContentLoaded
+		document.addEventListener("DOMContentLoaded", function () {
+			let mapElement = document.getElementById('map-box')
+			if (mapElement) {
+				ymaps.ready(init)
+			}
+		})
+
+		function init() {
+			var myMap = new ymaps.Map("map-box", {
+				center: [55.76, 37.64],
+				zoom: 10
+			})
+
+			var myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+				hintContent: 'Москва!',
+				balloonContent: 'Столица России'
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'images/myIcon.gif',
+				iconImageSize: [30, 42],
+				iconImageOffset: [-3, -42]
+			})
+
+			myMap.geoObjects.add(myPlacemark)
+
+			// Убрать прелоадер
+			var preloader = document.querySelector('.map__container-preloader')
+			if (preloader) {
+				preloader.classList.remove('active')
+			}
+		}
+	</script>
 </body>
-<script src="index.js"></script>
+
 
 </html>
