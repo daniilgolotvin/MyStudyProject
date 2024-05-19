@@ -6,6 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Resume</title>
 	<link rel="stylesheet" href="./index.css">
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=<Your_API_Key>&lang=ru_RU" type="text/javascript"></script>
+
 </head>
 
 <body class='body'>
@@ -67,22 +69,21 @@
 			</div>
 		</div>
 	</header>
-	<main class="main">
+	<main class="activity">
 		<div class="main__container">
 			<div class="comment">
 				<div class="comment__content">
-					<img src="./images/fon.jpeg" alt="Picture of a broken screen" class='comment__image'>
+					<img src="./images/myProfileOnGitHub.png" alt="volna" class='comment__image'>
 					<div class="comment__info">
 						<img src="./images/Comment Outline.svg" alt="Comment icon" class='comment__icon'>
-						<p class="comment__text"> <a href="#" class='comment__text-user'>Jason Anderson </a>commented: </p>
+						<p class="comment__text"> <a href="#" class='comment__text-user'>Daniil </a>commented: </p>
 					</div>
 					<div class="comment__details">
-						<p class='comment__description'>Don’t sit and wait. Get out there, feel life. Touch the sun, and immerse in
-							the sea.
-							Keep love in your heart. A life without it is like a sunless garden when the flowers are dead. Because
-							summer is passion, memories, light breeze, the sun that appears on the skin and caresses the face.
+						<p class='comment__description'>Hello, world. My name is Daniil and I am an beginner web developer. I am a
+							student of MISIS in the city of Vyksa at the Faculty of Information Technologies in Management and study
+							on courses from YandexPracticum in the direction of web development.
 						</p>
-						<p class='comment__time'>– Jason, <span class="comment__time-clock">10:30 am</span> </p>
+						<p class='comment__time'>– Danya, <span class="comment__time-clock">10:30 am</span> </p>
 					</div>
 					<div class="comment__actions">
 						<div class='comment-action'>
@@ -127,11 +128,83 @@
 				</div>
 
 			</div>
-			<div class="navigation"></div>
-			<div class="thoughts"></div>
+			<div class="navigation">
+				<div class="navigation__header">
+					<p class="navigation__title">Navigation</p>
+					<button class="navigation__toggle-button toggle__chevron-button">
+						<img src="./images/Chevron Down Outline.svg" alt="Toggle navigation">
+					</button>
+				</div>
+				<div class="navigation__content">
+					<div class="navigation__list">
+						<div class="navigation__item">
+							<img src="./images/Person Outline.svg" alt="Profile" class="navigation__icon">
+							<p class="navigation__text">My profile</p>
+						</div>
+						<div class="navigation__item">
+							<img src="./images/Finance Outline.svg" alt="Balance" class="navigation__icon">
+							<p class="navigation__text">Balance</p>
+							<p class="navigation__counter">$ 1,430</p>
+						</div>
+						<div class="navigation__item">
+							<img src="./images/Scheme Outline.svg" alt="Connections" class="navigation__icon">
+							<p class="navigation__text">Connections</p>
+							<p class="navigation__counter navigation__counter--alert">29</p>
+						</div>
+						<div class="navigation__item">
+							<img src="./images/People Outline.svg" alt="Friends" class="navigation__icon">
+							<p class="navigation__text">Friends</p>
+						</div>
+					</div>
+					<div class="navigation__list">
+						<div class="navigation__item">
+							<img src="./images/Calendar Outline.svg" alt="Events" class="navigation__icon">
+							<p class="navigation__text">Events</p>
+							<p class="navigation__counter navigation__counter--success">45</p>
+						</div>
+						<div class="navigation__item">
+							<img src="./images/Settings Outline.svg" alt="Account settings" class="navigation__icon">
+							<p class="navigation__text">Account settings</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="share-thoughts">
+				<div class="share-thoughts__header">
+					<p class="share-thoughts__title">Share your thoughts</p>
+					<button class="share-thoughts__toggle-button toggle__chevron-button">
+						<img src="./images/Chevron Down Outline.svg" alt="Toggle input">
+					</button>
+				</div>
+				<textarea class="share-thoughts__input" placeholder="Enter your message..."></textarea>
+				<button class="share-thoughts__submit-button">Save</button>
+			</div>
+
 		</div>
+		</div>
+
+
+	</main>
+	<main class="map">
+		<div class="map__group">
+			<p class="map__group-title">Basic map</p>
+			<div class="map__group-button">
+				<button class="map__group-button-map"></button>
+				<button class="map__group-button-map"></button>
+				<button class="map__group-button-map"></button>
+			</div>
+		</div>
+		<div class="map__container">
+			<div id="map" class="map__container-map"></div>
+			<div id="preloader" class="map__container-preloader">
+				<div class="map__preloader"></div>
+			</div>
 		</div>
 	</main>
 </body>
+<script src="index.js"></script>
 
 </html>
