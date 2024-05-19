@@ -1,0 +1,7 @@
+.header__group-icon {
+	width: 24px;
+	height: 24px;
+}
+.header__group-icon:hover {
+	opacity: 0.8;
+}
