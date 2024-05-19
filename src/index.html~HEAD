@@ -10,7 +10,7 @@
 	<meta name="keywords"
 		content="резюме, интерактивная карта, таймер посещения, JavaScript, HTML, CSS, создание сайта, веб-разработка">
 	<link rel="stylesheet" href="./pages/index.css">
-
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://yastatic.net;">
 	<script src="https://api-maps.yandex.ru/2.1/?apikey=bf05c8b6-4bae-4246-8532-e003bd4a9a98&lang=ru_RU&ns=ymaps"
 		type="text/javascript"></script>
 
