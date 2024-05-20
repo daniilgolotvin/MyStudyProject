@@ -32,7 +32,6 @@
 @import url(../blocks/navigation/__title/navigation__title.css);
 @import url(../blocks/navigation/__toggle-button/navigation__toggle-button.css);
 @import url(../blocks/navigation/navigation.css);
-@import url(../blocks/placeholder/);
 @import url(../blocks/placeholder/__button/placeholder__button.css);
 @import url(../blocks/placeholder/__details/placeholder__details.css);
 @import url(../blocks/placeholder/__icon/placeholder__icon.css);
@@ -40,7 +39,7 @@
 @import url(../blocks/placeholder/__text/placeholder__text.css);
 @import url(../blocks/placeholder/__time/placeholder__time.css);
 @import url(../blocks/navigation/__counter/navigation__counter.css);
-@import url(../blocks/placeholder/);
+@import url(../blocks/placeholder/placeholder.css);
 @import url(../blocks/profile/profile.css);
 @import url(../blocks/user/__avatar/user__avatar.css);
 @import url(../blocks/user/__description/user__description.css);
@@ -214,7 +213,6 @@ body {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: rgba(255, 255, 255, 0.8);
 	display: flex;
 	align-items: center;
 	justify-content: center;
