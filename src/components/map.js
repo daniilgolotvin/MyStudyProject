@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 							}
 					});
 
-					if (targetId === 'map-container' && !mapInitialized && typeof ymaps !== 'undefined') {
+					if (targetId === 'map' && !mapInitialized && typeof ymaps !== 'undefined') {
 							mapInitialized = true; // Помечаем, что карта уже была инициализирована
 							ymaps.ready(initMap);
 					}
