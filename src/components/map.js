@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 	const buttons = document.querySelectorAll('.header__bottom-button');
 	const blocks = document.querySelectorAll('.content-block');
+	let mapInitialized = false; // Флаг для проверки инициализации карты
 
 	buttons.forEach(button => {
 			button.addEventListener('click', function() {
@@ -24,24 +25,25 @@ document.addEventListener('DOMContentLoaded', function() {
 							}
 					});
 
-					if (targetId === 'map' && typeof ymaps !== 'undefined') {
+					if (targetId === 'map-container' && !mapInitialized && typeof ymaps !== 'undefined') {
+							mapInitialized = true; // Помечаем, что карта уже была инициализирована
 							ymaps.ready(initMap);
 					}
 			});
 	});
+
+	function initMap() {
+			var myMap = new ymaps.Map("map-box", {
+					center: [55.76, 37.64],
+					zoom: 10
+			});
+
+			var myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+					hintContent: 'Место проживания',
+					balloonContent: 'Здесь вы проживаете'
+			});
+
+			myMap.geoObjects.add(myPlacemark);
+			document.getElementById('preloader').style.display = 'none';
+	}
 });
-
-function initMap() {
-	var myMap = new ymaps.Map("map-box", {
-			center: [55.76, 37.64],
-			zoom: 10
-	});
-
-	var myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-			hintContent: 'Место проживания',
-			balloonContent: 'Здесь вы проживаете'
-	});
-
-	myMap.geoObjects.add(myPlacemark);
-	document.getElementById('preloader').style.display = 'none';
-}
