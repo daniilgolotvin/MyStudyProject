@@ -4,7 +4,7 @@
 	margin-right: 8px;
 	border: none;
 	background: none;
-	background-image: url(./images/Back\ Outline.svg);
+	background-image: url(../../../images/Back\ Outline.svg);
 }
 .header__button-back:hover {
 	opacity: 0.8;

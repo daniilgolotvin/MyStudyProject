@@ -11,5 +11,8 @@
 @media (max-width: 600px) {
 	.header__bottom {
 		flex-direction: column;
+		height: auto;
+		gap: 12px;
+		padding: 12px;
 	}
 }

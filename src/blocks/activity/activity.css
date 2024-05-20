@@ -1,6 +1,7 @@
 .activity {
 	display: flex;
 	flex-direction: row;
+
 	gap: 2.222vw;
 }
 

@@ -70,13 +70,24 @@ body {
 .share-thoughts {
 	width: 100%;
 	height: min(100%, 190px);
-
 	border: 1px solid #e0e0e0;
 	border-radius: 4px;
 	background-color: #fff;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	display: flex;
 	flex-direction: column;
+}
+
+@media (max-width: 1045px) {
+	.share-thoughts {
+		height: 328px;
+	}
+}
+
+@media (max-width: 600px) {
+	.share-thoughts {
+		width: 100%;
+	}
 }
 
 .share-thoughts__header {
@@ -201,20 +212,22 @@ body {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(255, 255, 255, 0.8);
 	display: flex;
-	justify-content: center;
 	align-items: center;
-	z-index: 1000;
+	justify-content: center;
+	z-index: 10;
 }
 
 .map__preloader {
-	border: 4px solid rgba(0, 0, 0, 0.1);
+	width: 50px;
+	height: 50px;
+	border: 5px solid #ccc;
+	border-top-color: #333;
 	border-radius: 50%;
-	border-top: 4px solid #333;
-	width: 40px;
-	height: 40px;
+	animation: spin 1s linear infinite;
 	animation: spin 1s linear infinite;
 }
 
