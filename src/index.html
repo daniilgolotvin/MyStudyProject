@@ -10,7 +10,7 @@
 	<meta name="keywords"
 		content="резюме, интерактивная карта, таймер посещения, JavaScript, HTML, CSS, создание сайта, веб-разработка">
 	<link rel="stylesheet" href="./pages/index.css">
-	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://yastatic.net;">
+
 	<script src="https://api-maps.yandex.ru/2.1/?apikey=bf05c8b6-4bae-4246-8532-e003bd4a9a98&lang=ru_RU&ns=ymaps"
 		type="text/javascript"></script>
 
@@ -231,41 +231,6 @@
 		</div>
 		<div class="timer__display" id="timer-display">00:00:00</div>
 	</main>
-	<script>
-		// Добавьте инициализацию карты внутри DOMContentLoaded
-		document.addEventListener("DOMContentLoaded", function () {
-			let mapElement = document.getElementById('map-box')
-			if (mapElement) {
-				ymaps.ready(init)
-			}
-		})
-
-		function init() {
-			var myMap = new ymaps.Map("map-box", {
-				center: [55.76, 37.64],
-				zoom: 10
-			})
-
-			var myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-				hintContent: 'Москва!',
-				balloonContent: 'Столица России'
-			}, {
-				iconLayout: 'default#image',
-				iconImageHref: 'images/myIcon.gif',
-				iconImageSize: [30, 42],
-				iconImageOffset: [-3, -42]
-			})
-
-			myMap.geoObjects.add(myPlacemark)
-
-			// Убрать прелоадер
-			var preloader = document.querySelector('.map__container-preloader')
-			if (preloader) {
-				preloader.classList.remove('active')
-			}
-		}
-	</script>
 </body>
-
 
 </html>
