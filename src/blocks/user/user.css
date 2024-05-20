@@ -1,0 +1,16 @@
+.user {
+	background-color: #fff;
+	width: 100%;
+	height: 296px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1045px) {
+	.user {
+		height: 328px;
+	}
+}
