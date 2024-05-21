@@ -1,0 +1,12 @@
+.activity {
+	display: flex;
+	flex-direction: row;
+
+	gap: 2.222vw;
+}
+
+@media (max-width: 1045px) {
+	.activity {
+		flex-direction: column-reverse;
+	}
+}
